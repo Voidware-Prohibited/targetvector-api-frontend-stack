@@ -2,8 +2,9 @@ import { Outlet } from 'react-router';
 import { AppSidebar } from '../components/app-sidebar';
 import { SidebarInset, SidebarTrigger } from '@/components/ui/sidebar';
 import { Breadcrumbs } from './breadcrums';
-import { Button } from '@/components/ui/button';
+// import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import { LanguageSelect } from '@/components/language-select';
 import { ModeToggle } from '@/components/theme-toggle';
 
 export function Root() {
@@ -20,21 +21,7 @@ export function Root() {
             />
             <Breadcrumbs />
             <div className="ml-auto flex items-center gap-2">
-              <Button
-                variant="ghost"
-                asChild
-                size="sm"
-                className="hidden sm:flex"
-              >
-                <a
-                  href="https://github.com/mailok/react-spa-starter"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="dark:text-foreground"
-                >
-                  GitHub
-                </a>
-              </Button>
+              <LanguageSelect />
               <ModeToggle />
             </div>
           </div>

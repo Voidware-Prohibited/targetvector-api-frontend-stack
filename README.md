@@ -14,6 +14,7 @@ Check out the live demo: **[https://react-spa-starter.vercel.app/](https://react
 - **TanStack Query** - Powerful data fetching and state management
 - **shadcn/ui** - Beautiful and accessible UI components
 - **Tailwind CSS v4** - Modern utility-first CSS framework
+- **il8n** - a powerful internationalization framework
 - **Vite** - Fast build tool and development server
 
 ## 🏗️ Pre-built Components

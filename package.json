@@ -1,7 +1,6 @@
 {
-  "name": "react-spa-starter",
-  "description": "Modern React SPA template with React Router v7, shadcn/ui, TypeScript, TanStack Query, and pre-built dashboard layouts for rapid development",
-  "private": true,
+  "name": "targetvector-api-frontend-stack",
+  "description": "Modern API Frontend stack with React, React Router v7, shadcn/ui, TypeScript, Passport, OAuth2, TanStack Query, and pre-built dashboard layouts for rapid development.",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -13,6 +12,9 @@
     "format:check": "prettier --check .",
     "preview": "vite preview"
   },
+  "keywords": [],
+  "author": "VOIDWARE Prohibited, Uriel Ballinas",
+  "license": "MIT",
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/modifiers": "^9.0.0",
@@ -41,11 +43,14 @@
     "@tanstack/react-table": "^8.21.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "i18next": "^25.4.2",
     "lucide-react": "^0.536.0",
     "next-themes": "^0.4.6",
+    "passport-oauth2": "^1.8.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.62.0",
+    "react-i18next": "^15.7.2",
     "react-router": "^7.7.1",
     "recharts": "^2.15.4",
     "sonner": "^2.0.7",
