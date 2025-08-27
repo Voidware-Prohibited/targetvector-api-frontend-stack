@@ -6,6 +6,9 @@ import { Breadcrumbs } from './breadcrums';
 import { Separator } from '@/components/ui/separator';
 import { LanguageSelect } from '@/components/language-select';
 import { ModeToggle } from '@/components/theme-toggle';
+import { UserPanel } from '@/components/user-panel';
+import {NotificationsPanel} from "@/components/notifications-panel.tsx";
+import {MessagesPanel} from "@/components/messages-panel.tsx";
 
 export function Root() {
   return (
@@ -23,6 +26,9 @@ export function Root() {
             <div className="ml-auto flex items-center gap-2">
               <LanguageSelect />
               <ModeToggle />
+              <MessagesPanel />
+              <NotificationsPanel />
+              <UserPanel />
             </div>
           </div>
         </header>

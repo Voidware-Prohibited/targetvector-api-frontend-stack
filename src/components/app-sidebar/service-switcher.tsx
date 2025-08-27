@@ -24,26 +24,26 @@ import {
 const data = {
   services: [
     {
-      name: 'Skilled Nursing Services',
+      name: 'Game Server 1',
       logo: GalleryVerticalEnd,
-      plan: 'SNF',
+      plan: 'GS1',
     },
     {
-      name: 'Home Health Services',
+      name: 'Game Server 2',
       logo: AudioWaveform,
-      plan: 'HHA',
+      plan: 'GS2',
     },
     {
-      name: 'Personal Care Services',
+      name: 'Game Server 3',
       logo: Command,
-      plan: 'PCA',
+      plan: 'GS3',
     },
   ],
 };
 
 export function ServiceSwitcher() {
   const { isMobile } = useSidebar();
-  const [activeService, setActiveService] = React.useState(data.services[2]);
+  const [activeService, setActiveService] = React.useState(data.services[0]);
 
   if (!activeService) {
     return null;

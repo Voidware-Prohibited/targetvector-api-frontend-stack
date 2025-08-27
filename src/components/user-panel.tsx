@@ -1,21 +1,44 @@
-import { Moon, Sun } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { useTheme } from '@/components/theme-provider';
+import { Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar'
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { User, SlidersVertical, LogOut } from 'lucide-react';
+import avatarImage from "@/assets/avatars/placeholder.png";
 
-export function ModeToggle() {
-  const { setTheme, theme } = useTheme();
-
+export function UserPanel() {
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="relative cursor-pointer"
-    >
-      <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-      <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-      <span className="sr-only">Toggle theme</span>
-    </Button>
+      <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+                  <Avatar className="h-8 w-8 rounded-lg">
+                      <AvatarImage src={avatarImage} alt="@Chrome Ronin" />
+                      <AvatarFallback className="rounded-lg">CR</AvatarFallback>
+                  </Avatar>
+              </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="w-56" align="end" forceMount>
+              <DropdownMenuLabel className="font-normal">
+                  <div className="flex flex-col space-y-1">
+                      <p className="text-sm font-medium leading-none">Chrome Ronin</p>
+                      <p className="text-xs leading-none text-muted-foreground">
+                          chromeronin@voidwarex.com
+                      </p>
+                  </div>
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Account <User className="mt-auto ml-auto size-4 cursor-pointer" /></DropdownMenuItem>
+              <DropdownMenuItem>Preferences <SlidersVertical className="mt-auto ml-auto size-4 cursor-pointer" /></DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Log out <LogOut className="mt-auto ml-auto size-4 cursor-pointer" /></DropdownMenuItem>
+
+          </DropdownMenuContent>
+      </DropdownMenu>
   );
 }

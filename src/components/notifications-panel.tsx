@@ -1,21 +1,44 @@
-import { Moon, Sun } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Bell } from "lucide-react";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator } from "@/components/ui/dropdown-menu";
 
-import { Button } from '@/components/ui/button';
-import { useTheme } from '@/components/theme-provider';
+export function NotificationsPanel() {
+    const notifications = [
+        { id: 1, message: "New message from John." },
+        { id: 2, message: "Your order has shipped!" },
+    ];
+    const notificationCount = notifications.length;
 
-export function ModeToggle() {
-  const { setTheme, theme } = useTheme();
-
-  return (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="relative cursor-pointer"
-    >
-      <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-      <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-      <span className="sr-only">Toggle theme</span>
-    </Button>
-  );
+    return (
+        <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+                <div className="relative">
+                    <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+                        <Bell className="h-5 w-5" />
+                    </Button>
+                    {notificationCount > 0 && (
+                        <Badge variant="destructive" className="absolute -top-1 -right-1 h-4 w-4 flex items-center justify-center p-0 rounded-full">
+                            {notificationCount}
+                        </Badge>
+                    )}
+                </div>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56" align="end">
+                <DropdownMenuLabel>Notifications</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                {notifications.length > 0 ? (
+                    notifications.map((notification) => (
+                        <DropdownMenuItem key={notification.id}>
+                            {notification.message}
+                        </DropdownMenuItem>
+                    ))
+                ) : (
+                    <DropdownMenuItem className="text-gray-500">No new notifications</DropdownMenuItem>
+                )}
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>View all notifications</DropdownMenuItem>
+            </DropdownMenuContent>
+        </DropdownMenu>
+    );
 }

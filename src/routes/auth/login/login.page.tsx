@@ -1,4 +1,9 @@
-import { GoogleLogo } from '@/components/google-log';
+import { LogoGoogle } from '@/components/logo-google.tsx';
+import { LogoSteam } from '@/components/logo-steam';
+import { LogoDiscord } from '@/components/logo-discord';
+import { LogoTwitch } from '@/components/logo-twitch';
+import { LogoTwitter } from '@/components/logo-twitter';
+import { LogoEpic } from '@/components/logo-epic';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -22,6 +27,12 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router';
 import { z } from 'zod';
+import {
+    InputOTP,
+    InputOTPGroup,
+    InputOTPSeparator,
+    InputOTPSlot,
+} from "@/components/ui/input-otp"
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -46,10 +57,30 @@ export function LoginPage() {
       <Card>
         <CardHeader className="text-center">
           <CardTitle className="text-xl">Welcome back</CardTitle>
-          <CardDescription>Login with your Google account</CardDescription>
+          <CardDescription>Login with your Verified Account</CardDescription>
           <Button className="mt-2 w-full gap-3" variant="outline">
-            <GoogleLogo />
+            <LogoGoogle />
             Continue with Google
+          </Button>
+          <Button className="mt-2 w-full gap-3" variant="outline">
+              <LogoTwitch />
+              Continue with Twitch
+          </Button>
+          <Button className="mt-2 w-full gap-3" variant="outline">
+              <LogoTwitter />
+              Continue with Twitter
+          </Button>
+          <Button className="mt-2 w-full gap-3" variant="outline">
+              <LogoSteam />
+              Continue with Steam
+          </Button>
+          <Button className="mt-2 w-full gap-3" variant="outline">
+              <LogoDiscord />
+              Continue with Discord
+          </Button>
+          <Button className="mt-2 w-full gap-3" variant="outline">
+              <LogoEpic />
+              Continue with Epic Games
           </Button>
         </CardHeader>
         <CardContent>
@@ -58,6 +89,20 @@ export function LoginPage() {
             <span className="px-2 text-sm">OR</span>
             <Separator />
           </div>
+
+          <InputOTP maxLength={6}>
+              <InputOTPGroup>
+                  <InputOTPSlot index={0} />
+                  <InputOTPSlot index={1} />
+                  <InputOTPSlot index={2} />
+              </InputOTPGroup>
+              <InputOTPSeparator />
+              <InputOTPGroup>
+                  <InputOTPSlot index={3} />
+                  <InputOTPSlot index={4} />
+                  <InputOTPSlot index={5} />
+              </InputOTPGroup>
+          </InputOTP>
 
           <Form {...form}>
             <form

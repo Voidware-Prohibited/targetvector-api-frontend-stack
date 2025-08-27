@@ -1,4 +1,4 @@
-import { GoogleLogo } from '@/components/google-log';
+import { LogoGoogle } from '@/components/logo-google.tsx';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -22,6 +22,12 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router';
 import { z } from 'zod';
+import {
+    InputOTP,
+    InputOTPGroup,
+    InputOTPSeparator,
+    InputOTPSlot,
+} from "@/components/ui/input-otp"
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -48,7 +54,7 @@ export function SignupPage() {
           <CardTitle className="text-xl">Create an account</CardTitle>
           <CardDescription>Sign up with your Google account</CardDescription>
           <Button className="mt-3 w-full gap-3" variant="outline">
-            <GoogleLogo />
+            <LogoGoogle />
             Continue with Google
           </Button>
         </CardHeader>
@@ -58,6 +64,20 @@ export function SignupPage() {
             <span className="px-2 text-sm">OR</span>
             <Separator />
           </div>
+
+          <InputOTP maxLength={6}>
+              <InputOTPGroup>
+                  <InputOTPSlot index={0} />
+                  <InputOTPSlot index={1} />
+                  <InputOTPSlot index={2} />
+              </InputOTPGroup>
+              <InputOTPSeparator />
+              <InputOTPGroup>
+                  <InputOTPSlot index={3} />
+                  <InputOTPSlot index={4} />
+                  <InputOTPSlot index={5} />
+              </InputOTPGroup>
+          </InputOTP>
 
           <Form {...form}>
             <form

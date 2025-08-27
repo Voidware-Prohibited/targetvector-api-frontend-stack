@@ -1,3 +1,21 @@
 {
-  "helloWorld": "Hello, world!"
+  "lang": {
+    "en": "English",
+    "es": "Spanish"
+  },
+  "debug": {
+    "helloWorld": "Hello, world!"
+  },
+  "nav": {
+    "sections": {
+      "status": "Status",
+      "moderation": "Moderation",
+      "admin": "Administration"
+    },
+    "status": {
+      "dashboard": "Dashboard",
+      "moderation": "Moderation",
+      "admin": "Administration"
+    }
+  }
 }

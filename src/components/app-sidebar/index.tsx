@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 import { NavSchedule } from '@/components/app-sidebar/nav-schedule';
-import { NavUser } from '@/components/app-sidebar/nav-user';
 import { ServiceSwitcher } from '@/components/app-sidebar/service-switcher';
 import {
   Sidebar,
@@ -22,10 +21,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <NavGeneral />
         <NavSchedule />
-        <NavSettings />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser />
+        <NavSettings />
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
