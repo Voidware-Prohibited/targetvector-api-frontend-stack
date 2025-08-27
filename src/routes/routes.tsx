@@ -19,6 +19,10 @@ import { SignupPage } from './auth/signup/signup.page';
 import { LoginPage } from './auth/login/login.page';
 import { TasksBreadcrumb } from './tasks/breadcrum';
 import TasksPage from './tasks/tasks.page';
+import { StatusBreadcrumb } from './status/breadcrumb';
+import StatusPage from './status/status.page';
+import { StatusCloudBreadcrumb } from './status/cloud/breadcrumb';
+import StatusCloudPage from './status/cloud/cloud.page';
 
 export const router = createBrowserRouter([
   {
@@ -77,9 +81,31 @@ export const router = createBrowserRouter([
             handle: {
               crumb: <CalendarBreadcrumb />,
             },
+
           },
         ],
       },
+        {
+            path: 'status',
+            element: <StatusPage />,
+            handle: {
+                crumb: <StatusBreadcrumb />,
+            },
+            children: [
+                {
+                    index: true,
+                    element: <Navigate to="cloud" replace />,
+                },
+                {
+                    path: 'cloud',
+                    element: <StatusCloudPage />,
+                    handle: {
+                        crumb: <StatusCloudBreadcrumb />,
+                    },
+
+                },
+            ],
+        },
     ],
   },
   {

@@ -1,18 +1,64 @@
-
 import { Button } from '@/components/ui/button';
+import {
+    Command,
+    CommandGroup,
+    CommandItem,
+    CommandList,
+    CommandSeparator,
+    CommandShortcut,
+} from "@/components/ui/command"
 import { Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar'
+import {
+    User,
+    SlidersVertical, LogOut
+} from "lucide-react"
 import {
     DropdownMenu,
     DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { User, SlidersVertical, LogOut } from 'lucide-react';
 import avatarImage from "@/assets/avatars/placeholder.png";
 
 export function UserPanel() {
+    const CommandMenu = [
+        <>
+            <div className="pl-4 pt-2 pb-4">
+                <p className="text-sm font-medium leading-none">Chrome Ronin</p>
+                <p className="text-xs leading-none text-muted-foreground">
+                    chromeronin@voidwarex.com
+                </p>
+            </div>
+            <Command className="rounded-lg border shadow-md md:min-w-[450px]">
+                <CommandList>
+                    <CommandGroup>
+                        <CommandItem>
+                            <User/>
+                            <span>Account</span>
+                            <CommandShortcut>⌘P</CommandShortcut>
+                        </CommandItem>
+                        <CommandItem>
+                            <SlidersVertical/>
+                            <span>Preferences</span>
+                            <CommandShortcut>⌘S</CommandShortcut>
+                        </CommandItem>
+                    </CommandGroup>
+                    <CommandSeparator/>
+                    <CommandGroup>
+                        <CommandItem>
+                            <User/>
+                            <span>Help</span>
+                            <CommandShortcut>⌘P</CommandShortcut>
+                        </CommandItem>
+                        <CommandItem>
+                            <LogOut/>
+                            <span>Logout</span>
+                            <CommandShortcut>⌘S</CommandShortcut>
+                        </CommandItem>
+                    </CommandGroup>
+                </CommandList>
+            </Command></>
+    ]
+
   return (
       <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -23,21 +69,8 @@ export function UserPanel() {
                   </Avatar>
               </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56" align="end" forceMount>
-              <DropdownMenuLabel className="font-normal">
-                  <div className="flex flex-col space-y-1">
-                      <p className="text-sm font-medium leading-none">Chrome Ronin</p>
-                      <p className="text-xs leading-none text-muted-foreground">
-                          chromeronin@voidwarex.com
-                      </p>
-                  </div>
-              </DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Account <User className="mt-auto ml-auto size-4 cursor-pointer" /></DropdownMenuItem>
-              <DropdownMenuItem>Preferences <SlidersVertical className="mt-auto ml-auto size-4 cursor-pointer" /></DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Log out <LogOut className="mt-auto ml-auto size-4 cursor-pointer" /></DropdownMenuItem>
-
+          <DropdownMenuContent className="w-80 pb-0" align="end" forceMount>
+              {CommandMenu}
           </DropdownMenuContent>
       </DropdownMenu>
   );

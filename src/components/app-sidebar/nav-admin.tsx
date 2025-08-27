@@ -18,10 +18,10 @@ import {
 } from '@/components/ui/sidebar';
 import { NavLink } from 'react-router';
 
-export function NavSchedule() {
+export function NavAdmin() {
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>Schedule</SidebarGroupLabel>
+      <SidebarGroupLabel>Admin</SidebarGroupLabel>
       <SidebarMenu>
         {/* Planning Section */}
         <Collapsible asChild defaultOpen={true} className="group/collapsible">

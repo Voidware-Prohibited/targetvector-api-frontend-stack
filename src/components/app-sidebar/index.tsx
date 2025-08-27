@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { NavSchedule } from '@/components/app-sidebar/nav-schedule';
+import { NavAdmin } from '@/components/app-sidebar/nav-admin.tsx';
 import { ServiceSwitcher } from '@/components/app-sidebar/service-switcher';
 import {
   Sidebar,
@@ -10,7 +10,9 @@ import {
   SidebarRail,
 } from '@/components/ui/sidebar';
 import { NavGeneral } from './nav-general';
+import { NavGameplay } from './nav-gameplay';
 import { NavSettings } from './nav-settings';
+import { NavModeration } from './nav-moderation';
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -20,7 +22,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavGeneral />
-        <NavSchedule />
+        <NavGameplay />
+        <NavModeration />
+        <NavAdmin />
       </SidebarContent>
       <SidebarFooter>
         <NavSettings />

@@ -1,4 +1,38 @@
-# React SPA Starter
+# Target Vector API Frontend Stack
+
+<p align="center">
+    <a href="https://github.com/Voidware-Prohibited/targetvector-api-frontend-stack/commits/master">
+    <img src="https://vercelbadge.vercel.app/api/Voidware-Prohibited/targetvector-api-frontend-stack?plastic"
+         alt="Build Status">
+    </a>
+    <a href="https://github.com/Voidware-Prohibited/targetvector-api-frontend-stack/commits/master">
+    <img src="https://img.shields.io/github/last-commit/Voidware-Prohibited/targetvector-api-frontend-stack.svg?style=flat-square&logo=github&logoColor=white"
+         alt="GitHub last commit">
+    </a>
+    <a href="https://github.com/Voidware-Prohibited/targetvector-api-frontend-stack/issues">
+    <img src="https://img.shields.io/github/issues-raw/Voidware-Prohibited/targetvector-api-frontend-stack.svg?style=flat-square&logo=github&logoColor=white"
+         alt="GitHub issues">
+    </a>
+    <a href="https://github.com/Voidware-Prohibited/targetvector-api-frontend-stack/pulls">
+    <img src="https://img.shields.io/github/issues-pr-raw/Voidware-Prohibited/targetvector-api-frontend-stack.svg?style=flat-square&logo=github&logoColor=white"
+         alt="GitHub pull requests">
+    </a>
+    <a href="https://github.com/Voidware-Prohibited/targetvector-api-frontend-stack/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg"
+         alt="MIT License">
+    </a>
+    <a href="https://github.com/sponsors/colorindarkness">
+    <img src="https://img.shields.io/github/sponsors/colorindarkness.svg?style=flat-square&logo=github&logoColor=white"
+         alt="Become a Sponsor">
+    </a>
+    <a href="https://www.patreon.com/colorindarkness">
+    <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dcolorindarkness%26type%3Dpatrons&style=flat"
+         alt="Become a Patron">
+    </a>
+    <a href="https://www.x.com/voidwarex">
+    <img alt="X (formerly Twitter) Follow" src="https://img.shields.io/twitter/follow/voidwarex?style=flat&logo=x">
+     </a>
+</p>
 
 A modern React SPA template with React Router v7, shadcn/ui, TypeScript, TanStack Query, and pre-built dashboard layouts for rapid development.
 
