@@ -1,4 +1,4 @@
-# Target Vector API Frontend Stack
+<h1 align="center">Aura</h1>
 
 <p align="center">
     <a href="https://github.com/Voidware-Prohibited/targetvector-api-frontend-stack/commits/master">
@@ -21,6 +21,8 @@
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg"
          alt="MIT License">
     </a>
+</p>
+<p align="center">
     <a href="https://github.com/sponsors/colorindarkness">
     <img src="https://img.shields.io/github/sponsors/colorindarkness.svg?style=flat-square&logo=github&logoColor=white"
          alt="Become a Sponsor">
@@ -49,6 +51,7 @@ Check out the live demo: **[https://react-spa-starter.vercel.app/](https://react
 - **shadcn/ui** - Beautiful and accessible UI components
 - **Tailwind CSS v4** - Modern utility-first CSS framework
 - **il8n** - a powerful internationalization framework
+- **ESLint, Prettier, Husky and Lint-Staged** - Automated Code Quality and Beautification.
 - **Vite** - Fast build tool and development server
 
 ## 🏗️ Pre-built Components
@@ -58,6 +61,21 @@ Check out the live demo: **[https://react-spa-starter.vercel.app/](https://react
 - **Dashboard Layout** - Professional dashboard with breadcrumbs
 - **Dark Mode** - Built-in theme switching support
 - **Responsive Design** - Mobile-first responsive layouts
+
+## 🔀 Versions
+Three implementation branches
+
+**Aura-Archon** - Frontend for the Archon Dedicated Server API and Management Framework Backend
+
+**Aura-Aevus** - Frontend for the Aevus Master Server API and Management Framework Backend
+```
+aura
+├──aura-archon
+    ├──aura-archon-edge
+├──aura-aevus
+    ├──aura-aevus-edge
+
+```
 
 ## 🚀 Quick Start
 
