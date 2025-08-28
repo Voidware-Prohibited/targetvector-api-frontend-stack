@@ -119,6 +119,7 @@ src/
 ## 🔧 Available Scripts
 
 - `pnpm run dev` - Start development server
+- `pnpm run prepare` - Prepare Husky Git Hooks
 - `pnpm run build` - Build for production
 - `pnpm run preview` - Preview production build
 - `pnpm run lint` - Run ESLint
@@ -144,8 +145,4 @@ This template is designed to be easily customizable:
 
 ## 📄 License
 
-This template is open source and available under the [MIT License](LICENSE).
-
----
-
-**Ready to build something amazing? Start coding! 🚀**
+This project is open source and available under the [MIT License](LICENSE).
