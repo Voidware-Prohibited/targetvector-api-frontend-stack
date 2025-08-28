@@ -4,6 +4,8 @@ import { DashboardPage } from './dashboard/dashboard.page';
 import { About } from './about/about.page';
 import { AuthLayout } from './auth/layout';
 import { DashboardBreadcrumb } from './dashboard/breadcrum';
+import {OverviewPage} from './overview/overview.page';
+import { OverviewBreadcrumb } from './overview/breadcrumb.tsx';
 import EmployeesPage from './employees/employees.page';
 import { EmployeesBreadcrumb } from './employees/breadcrum';
 import { ClientsBreadcrumb } from './clients/breadcrum';
@@ -36,6 +38,13 @@ export const router = createBrowserRouter([
           crumb: <DashboardBreadcrumb />,
         },
       },
+        {
+            path: 'overview',
+            element: <OverviewPage />,
+            handle: {
+                crumb: <OverviewBreadcrumb />,
+            },
+        },
       {
         path: 'employees',
         element: <EmployeesPage />,

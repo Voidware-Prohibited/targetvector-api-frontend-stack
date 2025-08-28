@@ -61,11 +61,11 @@ export function UserPanel() {
 
   return (
       <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="relative h-8 w-8 rounded-full">
-                  <Avatar className="h-8 w-8 rounded-lg">
+          <DropdownMenuTrigger asChild className="pl-8">
+              <Button variant="ghost" className="relative h-8 w-8 rounded-full pl-4">
+                  <Avatar className="h-8 w-8 rounded-md">
                       <AvatarImage src={avatarImage} alt="@Chrome Ronin" />
-                      <AvatarFallback className="rounded-lg">CR</AvatarFallback>
+                      <AvatarFallback className="rounded-md">CR</AvatarFallback>
                   </Avatar>
               </Button>
           </DropdownMenuTrigger>

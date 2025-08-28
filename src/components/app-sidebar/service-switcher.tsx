@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {
+  Gauge,
   AudioWaveform,
   ChevronsUpDown,
   Command,
@@ -24,18 +25,31 @@ import {
 const data = {
   services: [
     {
+      name: 'Overview',
+      logo: Gauge,
+      logocolor: 'fuchsia',
+      logobgcolor: 'chartreuse',
+      plan: 'All Servers',
+    },
+    {
       name: 'Game Server 1',
       logo: GalleryVerticalEnd,
+      logocolor: 'red',
+      logobgcolor: 'blueviolet',
       plan: 'GS1',
     },
     {
       name: 'Game Server 2',
       logo: AudioWaveform,
+      logocolor: 'white',
+      logobgcolor: 'deepskyblue',
       plan: 'GS2',
     },
     {
       name: 'Game Server 3',
       logo: Command,
+      logocolor: 'aqua',
+      logobgcolor: 'darkorange',
       plan: 'GS3',
     },
   ],
@@ -49,6 +63,8 @@ export function ServiceSwitcher() {
     return null;
   }
 
+  const baseBgClass = "bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg";
+
   return (
     <SidebarMenu>
       <SidebarMenuItem>
@@ -58,8 +74,8 @@ export function ServiceSwitcher() {
               size="lg"
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
-              <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                <activeService.logo className="size-4" />
+              <div className={`${baseBgClass} ${activeService.logocolor}`} style={{ backgroundColor: activeService.logobgcolor }}>
+                <activeService.logo className="size-4" color={activeService.logocolor}/>
               </div>
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-medium">

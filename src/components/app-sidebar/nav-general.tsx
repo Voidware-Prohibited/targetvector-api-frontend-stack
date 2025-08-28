@@ -20,6 +20,18 @@ export function NavGeneral() {
     <SidebarGroup>
       <SidebarGroupLabel>General</SidebarGroupLabel>
       <SidebarMenu>
+        <SidebarMenuItem key="overview">
+            <NavLink to="/overview">
+                {({ isActive }) => (
+                    <SidebarMenuButton isActive={isActive} asChild>
+              <span>
+                <LayoutDashboard />
+                Overview
+              </span>
+                    </SidebarMenuButton>
+                )}
+            </NavLink>
+        </SidebarMenuItem>
         <SidebarMenuItem key="dashboard">
           <NavLink to="/">
             {({ isActive }) => (

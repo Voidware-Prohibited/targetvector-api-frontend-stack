@@ -1,11 +1,11 @@
 import { BreadcrumbItem, BreadcrumbLink } from '@/components/ui/breadcrumb';
 import { Link } from 'react-router';
 
-export function StatusCloudBreadcrumb() {
+export function OverviewBreadcrumb() {
   return (
     <BreadcrumbItem className="hidden md:block">
       <BreadcrumbLink asChild>
-        <Link to="/status/cloud">Cloud</Link>
+        <Link to="/">Overview</Link>
       </BreadcrumbLink>
     </BreadcrumbItem>
   );
